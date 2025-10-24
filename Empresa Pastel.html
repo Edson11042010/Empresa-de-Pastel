@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastéis Duarte´s</title>
+    <link rel="stylesheet" href="Empresa Pastel.css">
+    <link rel="icon" type="image/png" href="Logo do Pasticel Duarte (2).png">
+  </head>
+
+  <body>
+    <header>
+      <img src="Logo do Pasticel Duarte (2).png" alt="Logo" width="200" style="vertical-align: middle;">
+      <h1>Bem-vindo ao Pastéis Duarte´s</h1>
+      <h2>Aqui o pastel é frito na hora e entregue quentinho na sua casa!</h2>
+      <h3>Sobre quem somos:</h3>
+      <h5>
+        O site Pastéis Duarte’s foi criado para deixar a vida dos nossos clientes muito mais fácil e saborosa.
+        A ideia surgiu quando percebemos que muita gente sentia vontade de comer um pastel quentinho,
+        mas nem sempre podia sair de casa. Pensando nisso, criamos um site simples e prático,
+        onde o cliente pode fazer seu pedido completo sem precisar levantar do sofá.
+      </h5>
+    </header>
+
+    <div class="opcoes-pasteis">
+      <div>
+        <label for="pastel-salgado">Escolha o sabor do seu pastel salgado:</label>
+        <select id="pastel-salgado">
+          <option>Selecione pastel salgado...</option>
+          <option>Carne</option>
+          <option>Queijo</option>
+          <option>Frango</option>
+          <option>Calabresa</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="pastel-doce">Escolha o sabor do seu pastel doce:</label>
+        <select id="pastel-doce">
+          <option>Selecione pastel doce...</option>
+          <option>Chocolate</option>
+          <option>Banana com canela</option>
+          <option>Romeu e Julieta</option>
+        </select>
+      </div>
+    </div>
+
+    <main>
+      <h2>Coloque os seus dados para completar o pedido:</h2>
+      <form id="formPedido">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required placeholder="Digite seu nome completo">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required placeholder="seuemail@exemplo.com">
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" required placeholder="(xx) xxxxx-xxxx">
+
+        <label for="endereco">Endereço:</label>
+        <textarea id="endereco" rows="1" required placeholder="Rua, número, bairro"></textarea>
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" required placeholder="Estado Ex: São Paulo">
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" required placeholder="Cidade Ex: Itapetininga">
+
+        <button type="submit" id="enviar">Fazer Pedido 🍴</button>
+      </form>
+    </main>
+  </body>
+</html>

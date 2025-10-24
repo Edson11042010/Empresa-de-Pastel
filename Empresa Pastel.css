@@ -1,0 +1,122 @@
+/* --- ESTILO GERAL --- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf2;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  background-color: #ffe8b3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+h1 {
+  color: #d17a00;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #b85c00;
+}
+
+
+.opcoes-pasteis {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap; 
+}
+
+.opcoes-pasteis label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.opcoes-pasteis select {
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 220px;
+}
+
+
+form {
+  background-color: #fff7e0;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+
+#formPedido {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 15px;
+}
+
+#formPedido label {
+  grid-column: span 1;
+}
+
+#formPedido textarea {
+  resize: none;
+}
+
+#enviar {
+  background-color: #ffb84d;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+#enviar:hover {
+  background-color: #e89a2e;
+  color: #fff;
+}
+
+
+
+@media (max-width: 600px) {
+  #formPedido {
+    grid-template-columns: 1fr; 
+  }
+
+  .opcoes-pasteis {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
