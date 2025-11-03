@@ -1,18 +1,28 @@
-/* --- ESTILO GERAL --- */
+/* --- ESTRUTURA GERAL --- */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #fffaf2;
   color: #333;
-  margin: 0;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* --- CABEÇALHO --- */
 header {
   text-align: center;
   background-color: #ffe8b3;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 header img {
@@ -24,39 +34,79 @@ h1 {
   color: #d17a00;
 }
 
-h2 {
-  margin-top: 30px;
+h2,
+h3 {
   color: #b85c00;
 }
 
+h5 {
+  font-weight: normal;
+  color: #444;
+  line-height: 1.5;
+}
 
+/* --- OPÇÕES DE PASTÉIS CONTAINER --- */
 .opcoes-pasteis {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 30px 0;
-  flex-wrap: wrap; 
-}
-
-.opcoes-pasteis label {
-  font-weight: bold;
-  margin-right: 8px;
-}
-
-.opcoes-pasteis select {
-  padding: 5px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  min-width: 220px;
-}
-
-
-form {
-  background-color: #fff7e0;
+  background-color: #ffe08a;
   padding: 20px;
   border-radius: 10px;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- CORREÇÃO DE ALINHAMENTO: Grupo de itens de pedido na mesma linha (Flexbox) --- */
+.item-pedido-group {
+  display: flex;
+  /* ESSENCIAL: Coloca label, select e input lado a lado */
+  align-items: center;
+  /* Alinha verticalmente */
+  gap: 10px;
+  /* Espaçamento entre os elementos da mesma linha */
+  flex-wrap: wrap;
+  /* Permite quebrar em telas pequenas */
+}
+
+/* Estilos dos inputs e selects dentro do grupo de pedido */
+.item-pedido-group label {
+  font-weight: bold;
+  /* Impede que o rótulo de "Quantidade" quebre a linha */
+  white-space: nowrap;
+}
+
+.item-pedido-group select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 220px;
+  font-size: 14px;
+}
+
+.item-pedido-group input[type="number"] {
+  /* Estilo específico para o campo de Quantidade */
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  /* Largura padrão para o campo de quantidade */
+  width: 60px;
+  text-align: center;
+}
+
+/* --- FORMULÁRIO (Informações do cliente) --- */
+main {
+  flex: 1;
+}
+
+form {
+  background-color: #ffe08a;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto 40px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -76,15 +126,10 @@ form textarea {
   width: 100%;
 }
 
-
 #formPedido {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   gap: 15px;
-}
-
-#formPedido label {
-  grid-column: span 1;
 }
 
 #formPedido textarea {
@@ -92,7 +137,7 @@ form textarea {
 }
 
 #enviar {
-  background-color: #ffb84d;
+  background-color: #f79502;
   color: #000;
   font-weight: bold;
   padding: 10px 20px;
@@ -108,15 +153,76 @@ form textarea {
   color: #fff;
 }
 
+/* --- FOOTER --- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e69a2a;
+  padding: 10px 20px;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin-top: auto;
+  border-top: 3px solid #d17a00;
+}
 
+footer img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
 
-@media (max-width: 600px) {
-  #formPedido {
-    grid-template-columns: 1fr; 
-  }
+.contato,
+.social {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
   .opcoes-pasteis {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
+
+  /* Garante que os elementos se empilhem em telas pequenas */
+  .item-pedido-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #formPedido {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+}
+
+/* --- TELA DE AGRADECIMENTO (NOVO) --- */
+#mensagem-agradecimento {
+  /* Centraliza o conteúdo (Flexbox) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Faz o bloco ocupar todo o espaço restante da tela */
+  flex: 1;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#mensagem-agradecimento h2 {
+  font-size: 3em;
+  color: #f79502;
+  margin-bottom: 10px;
+}
+
+#mensagem-agradecimento p {
+  font-size: 1.8em;
+  color: #4CAF50;
+  font-weight: bold;
 }
