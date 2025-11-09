@@ -6,6 +6,7 @@ body {
   padding: 0;
 }
 
+/* Estilos gerais do corpo da página */
 body {
   font-family: Arial, sans-serif;
   background-color: #fffaf2;
@@ -25,20 +26,24 @@ header {
   margin-bottom: 20px;
 }
 
+/* Estilo da imagem no cabeçalho */
 header img {
   display: block;
   margin: 0 auto 10px;
 }
 
+/* Estilos do título principal */
 h1 {
   color: #d17a00;
 }
 
+/* Estilos para títulos */
 h2,
 h3 {
   color: #b85c00;
 }
 
+/* Estilos para subtítulos */
 h5 {
   font-weight: normal;
   color: #444;
@@ -101,6 +106,7 @@ main {
   flex: 1;
 }
 
+/* Estilos do formulário */
 form {
   background-color: #ffe08a;
   padding: 20px;
@@ -113,10 +119,12 @@ form {
   gap: 10px;
 }
 
+/* Estilos dos elementos do formulário */
 form label {
   font-weight: bold;
 }
 
+/* Estilos dos inputs e textarea */
 form input,
 form textarea {
   padding: 8px;
@@ -126,17 +134,19 @@ form textarea {
   width: 100%;
 }
 
+/* Layout em grade para o formulário */
 #formPedido {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
 }
 
+/* Impede que o textarea seja redimensionável */
 #formPedido textarea {
   resize: none;
 }
 
-/* --- Botão de enviar --- */
+/*--- Botão de envio ---*/
 #enviar {
   background-color: #f79502;
   color: #000;
@@ -149,12 +159,13 @@ form textarea {
   transition: 0.3s;
 }
 
+/* Efeito hover no botão */
 #enviar:hover {
   background-color: #e89a2e;
   color: #fff;
 }
 
-/* --- FOOTER --- */
+/* --- RODAPÉ --- */
 footer {
   display: flex;
   justify-content: space-between;
@@ -167,11 +178,13 @@ footer {
   border-top: 3px solid #d17a00;
 }
 
+/* Estilo das imagens no rodapé */
 footer img {
   vertical-align: middle;
   margin-right: 5px;
 }
 
+/* Alinha ícones e textos no rodapé */
 .contato,
 .social {
   display: flex;
@@ -191,10 +204,12 @@ footer img {
     align-items: center;
   }
 
+  /* Formulário em uma coluna em telas pequenas */
   #formPedido {
     grid-template-columns: 1fr;
   }
 
+  /* Rodapé em coluna em telas pequenas */
   footer {
     flex-direction: column;
     gap: 5px;
@@ -216,12 +231,14 @@ footer img {
   padding: 50px 20px;
 }
 
+/* Estilos do título e parágrafo na mensagem de agradecimento */
 #mensagem-agradecimento h2 {
   font-size: 3em;
   color: #f79502;
   margin-bottom: 10px;
 }
 
+/* Estilos do parágrafo na mensagem de agradecimento */
 #mensagem-agradecimento p {
   font-size: 1.8em;
   color: #4CAF50;
