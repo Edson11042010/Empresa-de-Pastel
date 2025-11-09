@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<!--Cabeça do código-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pastéis Duarte´s</title>
+<!--Link do arquivo CSS-->
   <link rel="stylesheet" href="Empresa Pastel.css">
   <link rel="icon" type="image/png" href="Logo do Pasticel Duarte (2).png">
 </head>
 
+<!--Corpo do código-->
 <body>
   <header>
     <img src="Logo do Pasticel Duarte (2).png" alt="Logo" width="200" style="vertical-align: middle;">
@@ -16,6 +19,7 @@
     <h1>Bem-vindo ao Pastéis Duarte´s</h1>
     <h2>Aqui o pastel é frito na hora e entregue quentinho na sua casa!</h2>
 
+<!--Um pouco do que a empresa oferece-->
     <h3>Sobre quem somos:</h3>
     <h5>
       O site Pastéis Duarte’s foi criado para deixar a vida dos nossos clientes muito mais fácil e saborosa.
@@ -25,12 +29,14 @@
     </h5>
   </header>
 
+<!--Fazer o pedido-->
   <div id="conteudo-pedido">
 
     <h2>Faça seu pedido agora mesmo!</h2>
-
+<!--Opção de pastel-->
     <div class="opcoes-pasteis">
 
+<!--Opções de pastéis salgados-->
       <div class="item-pedido-group">
         <label for="pastel-salgado">Escolha o sabor do seu pastel salgado:</label>
         <select id="pastel-salgado">
@@ -42,10 +48,12 @@
           <option>Camarão</option>
         </select>
 
+<!--Quantidade de pastel salgado-->
         <label for="qtd-salgado">Quantidade:</label>
         <input type="number" id="qtd-salgado" min="1" value="1">
       </div>
 
+<!--Opções de pastéis doces-->
       <div class="item-pedido-group">
         <label for="pastel-doce">Escolha o sabor do seu pastel doce:</label>
         <select id="pastel-doce">
@@ -54,13 +62,15 @@
           <option>Banana com canela</option>
           <option>Romeu e Julieta</option>
           <option>Beijinho</option>
-          <option>Doce de leite</option>
+          <option>Doce de Leite</option>
         </select>
 
+<!--Quantidade de pastel doce-->        
         <label for="qtd-doce">Quantidade:</label>
         <input type="number" id="qtd-doce" min="1" value="1">
       </div>
 
+<!--Opções de bebidas-->
       <div class="item-pedido-group">
         <label for="bebida">Escolha sua bebida:</label>
         <select id="bebida">
@@ -73,54 +83,68 @@
           <option>Caldo de cana</option>
         </select>
 
+<!--Quantidade de bebida-->
         <label for="qtd-bebida">Quantidade:</label>
         <input type="number" id="qtd-bebida" min="1" value="1">
       </div>
     </div>
 
-
+<!--Formulário de dados para completar o pedido-->
     <main>
       <h2>Coloque os seus dados para completar o pedido:</h2>
       <form id="formPedido">
 
+<!--Dados do cliente-->
         <label for="nome">Nome:</label>
         <input type="text" id="nome" required placeholder="Digite seu nome completo">
 
+        <!--E-mail-->
         <label for="email">E-mail:</label>
         <input type="email" id="email" required placeholder="seuemail@exemplo.com">
 
+        <!--Telefone-->
         <label for="telefone">Telefone:</label>
         <input type="tel" id="telefone" required placeholder="(xx) xxxxx-xxxx">
 
+        <!--Endereço completo-->
         <label for="endereco">Endereço:</label>
         <textarea id="endereco" rows="1" required placeholder="Rua"></textarea>
 
+        <!--Número da casa-->
         <label for="número">Número:</label>
         <input type="number" id="Número" required placeholder="Número da casa">
 
+        <!--Bairro-->
         <label for="bairro">Bairro:</label>
         <input type="text" id="bairro" required placeholder="Bairro/Vila">
 
+        <!--Referência-->
         <label for="referencia">Referência:</label>
         <input type="text" id="referencia" required placeholder="Casa, apartamento">
 
+        <!--Estado-->
         <label for="estado">Estado:</label>
         <input type="text" id="estado" required placeholder="Estado Ex: São Paulo">
 
+        <!--Cidade-->
         <label for="cidade">Cidade:</label>
         <input type="text" id="cidade" required placeholder="Cidade Ex: Itapetininga">
 
+        <!--Botão de enviar pedido-->
         <button type="submit" id="enviar">Fazer Pedido </button>
       </form>
     </main>
 
   </div>
 
+<!--Mensagem de agradecimento-->
   <div id="mensagem-agradecimento" style="display: none;">
   </div>
 
+<!--Link do arquivo JavaScript-->
   <script src="Empresa Pastel.js"></script>
 
+<!--Rodapé com contato e redes sociais-->
   <footer>
     <div class="contato">
       <img src="whatsapp logo.png" alt="whatsapp" width="25">
