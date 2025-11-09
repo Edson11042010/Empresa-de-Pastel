@@ -136,6 +136,7 @@ form textarea {
   resize: none;
 }
 
+/* --- Botão de enviar --- */
 #enviar {
   background-color: #f79502;
   color: #000;
