@@ -1,2 +1,2 @@
 # Empresa-de-Pastel
-Empresa de Pastel, com as linguagens HTML e CSS
+Empresa de Pastel, com as linguagens HTML, CSS e Javascript 
