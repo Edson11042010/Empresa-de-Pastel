@@ -1,0 +1,104 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #fffaf2;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- OPÇÕES DE PASTÉIS CONTAINER --- */
+.opcoes-pasteis {
+  background-color: #ffe08a;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- CORREÇÃO DE ALINHAMENTO: Grupo de itens de pedido na mesma linha (Flexbox) --- */
+.item-pedido-group {
+  display: flex;
+  /* ESSENCIAL: Coloca label, select e input lado a lado */
+  align-items: center;
+  /* Alinha verticalmente */
+  gap: 10px;
+  /* Espaçamento entre os elementos da mesma linha */
+  flex-wrap: wrap;
+  /* Permite quebrar em telas pequenas */
+}
+
+/* Estilos dos inputs e selects dentro do grupo de pedido */
+.item-pedido-group label {
+  font-weight: bold;
+  /* Impede que o rótulo de "Quantidade" quebre a linha */
+  white-space: nowrap;
+}
+
+.item-pedido-group select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 220px;
+  font-size: 14px;
+}
+
+.item-pedido-group input[type="number"] {
+  /* Estilo específico para o campo de Quantidade */
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  /* Largura padrão para o campo de quantidade */
+  width: 60px;
+  text-align: center;
+}
+
+button#enviar {
+  background-color: #ffb74d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+/* --- MENU PRINCIPAL --- */
+.menu {
+  background-color: #e69a2a;
+  padding: 10px 0;
+  border-bottom: 3px solid #d17a00;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #fff;
+}

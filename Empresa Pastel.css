@@ -1,0 +1,286 @@
+/* --- ESTRUTURA GERAL --- */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- BANNER DE PONTA A PONTA --- */
+header img.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Estilos gerais do corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf2;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- CABEÇALHO --- */
+header {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilo da imagem no cabeçalho */
+header img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* Estilos do título principal */
+h1 {
+  color: #d17a00;
+}
+
+/* Estilos para títulos */
+h2,
+h3 {
+  color: #b85c00;
+}
+
+/* Estilos para subtítulos */
+h5 {
+  font-weight: normal;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* --- OPÇÕES DE PASTÉIS CONTAINER --- */
+.opcoes-pasteis {
+  background-color: #ffe08a;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- CORREÇÃO DE ALINHAMENTO: Grupo de itens de pedido na mesma linha (Flexbox) --- */
+.item-pedido-group {
+  display: flex;
+  /* ESSENCIAL: Coloca label, select e input lado a lado */
+  align-items: center;
+  /* Alinha verticalmente */
+  gap: 10px;
+  /* Espaçamento entre os elementos da mesma linha */
+  flex-wrap: wrap;
+  /* Permite quebrar em telas pequenas */
+}
+
+/* Estilos dos inputs e selects dentro do grupo de pedido */
+.item-pedido-group label {
+  font-weight: bold;
+  /* Impede que o rótulo de "Quantidade" quebre a linha */
+  white-space: nowrap;
+}
+
+.item-pedido-group select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 220px;
+  font-size: 14px;
+}
+
+.item-pedido-group input[type="number"] {
+  /* Estilo específico para o campo de Quantidade */
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  /* Largura padrão para o campo de quantidade */
+  width: 60px;
+  text-align: center;
+}
+
+/* --- FORMULÁRIO (Informações do cliente) --- */
+main {
+  flex: 1;
+}
+
+/* Estilos do formulário */
+form {
+  background-color: #ffe08a;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilos dos elementos do formulário */
+form label {
+  font-weight: bold;
+}
+
+/* Estilos dos inputs e textarea */
+form input,
+form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Layout em grade para o formulário */
+#formPedido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Impede que o textarea seja redimensionável */
+#formPedido textarea {
+  resize: none;
+}
+
+/*--- Botão de envio ---*/
+#enviar {
+  background-color: #f79502;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+/* Efeito hover no botão */
+#enviar:hover {
+  background-color: #e89a2e;
+  color: #fff;
+}
+
+/* --- RODAPÉ --- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e69a2a;
+  padding: 10px 20px;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin-top: auto;
+  border-top: 3px solid #d17a00;
+}
+
+/* Estilo das imagens no rodapé */
+footer img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Alinha ícones e textos no rodapé */
+.contato,
+.social {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  .opcoes-pasteis {
+    align-items: center;
+  }
+
+  /* Garante que os elementos se empilhem em telas pequenas */
+  .item-pedido-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Formulário em uma coluna em telas pequenas */
+  #formPedido {
+    grid-template-columns: 1fr;
+  }
+
+  /* Rodapé em coluna em telas pequenas */
+  footer {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+}
+
+/* --- TELA DE AGRADECIMENTO (NOVO) --- */
+#mensagem-agradecimento {
+  /* Centraliza o conteúdo (Flexbox) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Faz o bloco ocupar todo o espaço restante da tela */
+  flex: 1;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Estilos do título e parágrafo na mensagem de agradecimento */
+#mensagem-agradecimento h2 {
+  font-size: 3em;
+  color: #f79502;
+  margin-bottom: 10px;
+}
+
+/* Estilos do parágrafo na mensagem de agradecimento */
+#mensagem-agradecimento p {
+  font-size: 1.8em;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* --- MENU PRINCIPAL --- */
+.menu {
+  background-color: #e69a2a;
+  padding: 10px 0;
+  border-bottom: 3px solid #d17a00;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #fff;
+}

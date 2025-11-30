@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<link rel=stylesheet href="pedido.css">
+<title>Pedido</title>
+<link rel="icon" type="image/png" href="Logo do Pasticel Duarte (2).png">
+
+<body>
+  <img class="banner" src="Banner 2.png" alt="Logo">
+
+  <nav class="menu">
+    <ul>
+      <li><a href="Empresa Pastel.html">Página Inicial</a></li>
+      <li><a href="pedido.html">Fazer Pedido</a></li>
+      <li><a href="dado.html">Dados</a></li>
+    </ul>
+  </nav>
+
+  <!--Fazer o pedido-->
+  <div id="conteudo-pedido">
+
+    <h2>Faça seu pedido agora mesmo!</h2>
+    <!--Opção de pastel-->
+    <div class="opcoes-pasteis">
+
+      <!--Opções de pastéis salgados-->
+      <div class="item-pedido-group">
+        <label for="pastel-salgado">Escolha o sabor do seu pastel salgado:</label>
+        <select id="pastel-salgado">
+          <option>Selecione pastel salgado...</option>
+          <option>Carne</option>
+          <option>Queijo</option>
+          <option>Frango</option>
+          <option>Calabresa</option>
+          <option>Camarão</option>
+        </select>
+
+        <!--Quantidade de pastel salgado-->
+        <label for="qtd-salgado">Quantidade:</label>
+        <input type="number" id="qtd-salgado" min="1" value="1">
+      </div>
+
+      <!--Opções de pastéis doces-->
+      <div class="item-pedido-group">
+        <label for="pastel-doce">Escolha o sabor do seu pastel doce:</label>
+        <select id="pastel-doce">
+          <option>Selecione pastel doce...</option>
+          <option>Chocolate</option>
+          <option>Banana com canela</option>
+          <option>Romeu e Julieta</option>
+          <option>Beijinho</option>
+          <option>Doce de Leite</option>
+        </select>
+
+        <!--Quantidade de pastel doce-->
+        <label for="qtd-doce">Quantidade:</label>
+        <input type="number" id="qtd-doce" min="1" value="1">
+      </div>
+
+      <!--Opções de bebidas-->
+      <div class="item-pedido-group">
+        <label for="bebida">Escolha sua bebida:</label>
+        <select id="bebida">
+          <option>Selecione uma bebida...</option>
+          <option>Coca cola</option>
+          <option>Fanta</option>
+          <option>Vinho</option>
+          <option>Cerveja Brahma</option>
+          <option>Água</option>
+          <option>Caldo de cana</option>
+        </select>
+
+        <!--Quantidade de bebida-->
+        <label for="qtd-bebida">Quantidade:</label>
+        <input type="number" id="qtd-bebida" min="1" value="1">
+      </div>
+    </div>
+
+    <button type="submit" id="enviar">Fazer Pedido </button>
+
+    <script>
+      document.getElementById("enviar").addEventListener("click", function () {
+        const saborSalgado = document.getElementById("pastel-salgado").value;
+        const quantidadeSalgado = document.getElementById("qtd-salgado").value;
+        const saborDoce = document.getElementById("pastel-doce").value;
+        const quantidadeDoce = document.getElementById("qtd-doce").value;
+        const bebida = document.getElementById("bebida").value;
+        const quantidadeBebida = document.getElementById("qtd-bebida").value;
+
+        let resumoPedido = "Resumo do Pedido:\n";
+
+        if (saborSalgado !== "Selecione pastel salgado...") {
+          resumoPedido += `Pastel Salgado: ${saborSalgado} - Quantidade: ${quantidadeSalgado}\n`;
+        }
+
+        if (saborDoce !== "Selecione pastel doce...") {
+          resumoPedido += `Pastel Doce: ${saborDoce} - Quantidade: ${quantidadeDoce}\n`;
+        }
+
+        if (bebida !== "Selecione uma bebida...") {
+          resumoPedido += `Bebida: ${bebida} - Quantidade: ${quantidadeBebida}\n`;
+        }
+
+        if (resumoPedido === "Resumo do Pedido:\n") {
+          resumoPedido += "Nenhum item selecionado.";
+        }
+
+        alert(resumoPedido);
+      });
+    </script>
+</body>
+
+
+</html>
